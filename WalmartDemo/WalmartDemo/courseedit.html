@@ -1,0 +1,25 @@
+﻿
+
+
+
+<h1>Enter the Id to edit </h1>
+<label class="control-label" for="Id1">Please enter the correct id or you will be logged out!</label>
+    
+    <form ame="form" class="form-search">
+        <div>
+            <div class="control-group" ng-class="{error: form.Id.$invalid}">
+
+                <br />
+                <div class="controls">
+                    <input type="number" ng-model="query" maxlength="5" min="10000" max="99999" required id="Id" name="Id" />
+                    <div ng-show="form.Id.$invalid">Please enter 5 digits Id</div>
+                </div>
+            </div>
+            <br />
+            <a href="#!courseedit/{{query}}">Click here to edit</a>
+        </div>
+        <button ng-click="reset()" ng-disabled="!query" type="submit" class="btn">Reset</button>
+
+        <button ng-click="back()" type="submit" class="btn">Go Back</button>
+    </form>
+

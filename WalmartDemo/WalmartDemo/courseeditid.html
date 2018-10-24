@@ -1,0 +1,21 @@
+﻿
+<div ng-repeat="cobj in cobjs">
+    <br />
+    Id:<input type="text" ng-model="cobj.Id" id="Id" name="Id" placeholder="" readonly />
+    <br />
+    Name<input type="text" ng-model="cobj.Name" placeholder="" required />
+    <br />
+    Length<input type="text" ng-model="cobj.Length" placeholder="" required />
+    <br />
+    Subject :<input type="text" ng-model="cobj.Subject" placeholder="" required />
+    <button ng-click="edit()" class="btn btn-primary">
+        Edit
+
+    </button>
+</div>
+
+<div class="form-actions">
+
+    <label ng-model="message">{{message}}</label>
+    <a href="#/courseedit" class="btn">Cancel</a>
+</div>

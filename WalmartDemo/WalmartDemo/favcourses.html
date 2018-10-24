@@ -1,0 +1,27 @@
+﻿<h1>Please Select your fav courses by clicking the favorites button</h1>
+
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Length</th>
+        <th>Subject</th>
+        <th>Add Fav</th>
+    </tr>
+    <tbody>
+        <tr ng-repeat="course in courses">
+            <td>{{course.Id}}</td>
+            <td>{{course.Name}}</td>
+            <td>{{course.Length}}</td>
+            <td>{{course.Subject}}</td>
+            <td> <button ng-click="addfav(course)" type="submit" class="btn">Favorites</button></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+{{favsofar}}
+<br />
+<button ng-click="done()" type="submit" class="btn">Show Favorites</button>
+<h3>{{message}}</h3>
+
+<a ng-show="message!=null" href="#!coursecrud">Perform CRUD</a> <a ng-show="message!=null" href="#!/">Logout</a>

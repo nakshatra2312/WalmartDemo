@@ -1,0 +1,19 @@
+﻿<h1>Courses List</h1>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Length</th>
+        <th>Subject</th>
+    </tr>
+    <tbody>
+        <tr ng-repeat="course in courses">
+            <td>{{course.Id}}</td>
+            <td>{{course.Name}}</td>
+            <td>{{course.Length}}</td>
+            <td>{{course.Subject}}</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button ng-click="back()" type="submit" class="btn">Go Back</button>

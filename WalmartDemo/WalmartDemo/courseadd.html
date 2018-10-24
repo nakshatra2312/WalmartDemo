@@ -1,0 +1,42 @@
+﻿<h1>Add</h1>
+
+<form name="form" class="form-horizontal">
+    <div class="control-group" ng-class="{error: form.Id.$invalid}">
+        <label class="control-label" for="Id">Id</label>
+        <div class="controls">
+
+            <input type="number" ng-model="course.Id" maxlength="5" min="10000" max="99999" required id="Id" name="Id" />
+            <div ng-show="form.Id.$invalid">Please enter 5 digits Id</div>
+        </div>
+    </div>
+
+    <div class="control-group" ng-class="{error: form.Name.$invalid}">
+        <label class="control-label" for="Name">Name</label>
+        <div class="controls">
+            <input type="text" ng-model="course.Name" required id="Name"/>
+        </div>
+    </div>
+
+    <div class="control-group" ng-class="{error: form.Length.$invalid}">
+        <label class="control-label" for="Length">Length</label>
+        <div class="controls">
+            <input type="number" ng-model="course.Length" required id="Length"/>
+        </div>
+    </div>
+
+    <div class="control-group" ng-class="{error: form.Subject.$invalid}">
+        <label class="control-label" for="Subject">Subject</label>
+        <div class="controls">
+            <input type="text" ng-model="course.Subject" required id="Subject"/>
+        </div>
+    </div>
+    <div>
+        <button ng-click="save()" ng-disabled="form.Id.$invalid" ng-class="btn btn-primary">
+            Submit
+        </button>
+        <a href="#!coursecrud" class="btn">Cancel</a>
+   
+
+
+    </div>
+</form>
